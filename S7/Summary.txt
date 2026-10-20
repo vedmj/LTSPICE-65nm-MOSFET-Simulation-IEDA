@@ -1,0 +1,13 @@
+Based on the Voltage Transfer Characteristic (VTC) plot obtained from sweeping Vin from 0 V to VDD
+​
+1. Logical Inversion (Complementary States)
+When Vin = 0 V (Logic LOW): The pMOS transistor is turned ON while the nMOS transistor is turned OFF. 
+This pulls the output node up to VDD=1.1 V (Logic HIGH).   
+When Vin = 1.1 V (Logic HIGH): The pMOS transistor turns OFF while the nMOS transistor turns ON. This pulls the output node down to 
+0 V (Logic LOW).   
+Hence it performs at NOT gate
+
+2. Sharp Transition Region
+The steep negative slope in the center of the curve shows that as Vin passes through the threshold region (around 0.55 V), the 
+circuit sharply switches state. This high voltage gain inside the transition region ensures clear separation between logical 0 and 
+logical 1 levels, providing high noise margins for digital applications.   

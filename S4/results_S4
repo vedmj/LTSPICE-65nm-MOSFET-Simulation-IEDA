@@ -1,0 +1,12 @@
+UA = UB = 0 (Enormal model). The effective mobility is given by μeff = U0 / (1 + UA·Eeff + UB·Eeff²), 
+where Eeff is the vertical field in the channel. UA and UB describe mobility degradation from surface-roughness
+and phonon scattering at the Si/SiO2 interface, which is what the Enormal model captures in TCAD.
+Setting UA = UB = 0 removes this degradation, so μeff = U0 at all gate voltages. 
+The current increases only slightly, and the difference appears at high gate voltage where the vertical field is large. 
+Below threshold the vertical field is small, so the curves nearly coincide.
+
+VSAT × 100 (HighFieldSaturation model). At a channel length of 65 nm, the lateral field is far above the critical field,
+so carriers move at the saturation velocity vsat instead of at μE. This is the effect modelled by HighFieldSaturation in TCAD. 
+Multiplying VSAT by 100 effectively switches velocity saturation off, so the carriers are no longer velocity-limited. 
+This gives the largest increase in on-current, and the curve rises much more steeply with VG than the normal case.
+

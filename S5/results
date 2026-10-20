@@ -1,0 +1,89 @@
+Exp 1: 
+    VTH0. Raising VTH0 from 0.30 V to 0.55 V shifts the transfer curve to the right, so IOFF falls 
+    rom about 10⁻⁷ A/µm to about 3×10⁻¹⁰ A/µm, a drop of more than two orders of magnitude. ION falls much less,
+    from about 1350 µA/µm to about 950 µA/µm at VGS = VDS = 1.1 V, since it depends only on the gate overdrive
+
+Exp 2:
+    TOXE. Increasing TOXE from 1.5 nm to 2.5 nm lowers the gate capacitance and weakens gate control, 
+    which raises the effective threshold voltage and shifts the transfer curve to the right. 
+    IOFF drops from about 2×10⁻⁸ A/µm to about 1×10⁻⁹ A/µm, more than an order of magnitude, and ION falls from about 1230 µA/µm 
+    to about 1000 µA/µm at VGS = VDS = 1.1 V because of the smaller inversion charge
+
+Exp 3:
+    Increasing L from 55 nm to 100 nm lowers the drive current, since the longer channel has a lower lateral field 
+    and higher channel resistance, so ION falls from about 1640 µA/µm to about 760 µA/µm at VGS = VDS = 1.1 V.
+    IOFF drops from about 10⁻⁷ A/µm to about 10⁻⁹ A/µm because short-channel effects such as DIBL
+    and the ID–VD curve of the 100 nm device is also much flatter in saturation, which shows reduced channel-length modulation.
+
+Exp 4:
+    Making XL less negative, from -35 nm to -15 nm, increases the physical gate length (L + XL goes from 30 nm to 50 nm) and 
+    the effective channel length. This lowers the drive current, so ION falls from about 1320 µA/µm to about 920 µA/µm at
+    VGS = VDS = 1.1 V, and IOFF falls from about 2×10⁻⁸ A/µm to about 2×10⁻⁹ A/µm because short-channel effects weaken in the 
+    longer channel. The trend matches Exp 3, but the effect is smaller since XL changes the effective length by only 20 nm.
+
+Exp 5:
+    Increasing LINT from 2 nm to 8 nm increases the source/drain overlap under the gate on each side, 
+    which shortens the effective channel (Leff = L + XL - 2·LINT, from about 31 nm to 19 nm). The drive current rises, with ION going
+    from about 1025 µA/µm to about 1340 µA/µm at VGS = VDS = 1.1 V, and IOFF rises from about 3×10⁻⁹ A/µm to about 2×10⁻⁸ A/µm 
+    because short-channel effects such as DIBL become stronger.
+
+Exp 6:
+    Increasing W from 0.5 µm to 2 µm scales the current almost in proportion to width, since a wider channel carries more carriers
+    in parallel. ION rises from about 470 µA to about 1880 µA at VGS = VDS = 1.1 V, and IOFF rises from about 3×10⁻⁹ A to about
+    1.4×10⁻⁸ A. The curves do not shift along the gate-voltage axis, so VTH is essentially unchanged, and the plotted current 
+    is the absolute current for each width, not a per-µm value.
+
+Exp 7:
+    Increasing WINT from 0 nm to 40 nm reduces the effective width (Weff = W - 2·WINT, from 1 µm to about 0.92 µm),
+    so ION at VGS = VDS = 1.1 V falls only slightly, from about 1160 µA/µm to about 1100 µA/µm, which is a small, 
+    roughly proportional drop. The subthreshold curves overlap, so IOFF and VTH are essentially unchanged on the log plot
+
+Exp 8:
+    Increasing NDEP from 1.5×10¹⁸ to 4×10¹⁸ cm⁻³ raises VTH through the larger depletion charge and also lowers the mobility,
+    so ION at VGS = VDS = 1.1 V falls modestly, from about 1220 µA/µm to about 1105 µA/µm. The effect on IOFF looks 
+    opposite to the expected trend: the curves cross near VG = 0.2 V and IOFF at VG = 0 actually rises slightly, from 
+    about 5×10⁻⁹ A/µm to about 1.1×10⁻⁸ A/µm. This is because heavier doping increases the depletion capacitance 
+    and because BSIM4 also uses NDEP in its short-channel and body-effect terms
+
+Exp 9:
+    The curves differ by only about 1% at VG = 0 and by well under 0.1% at VGS = VDS = 1.1 V (about 1150 µA/µm), so 
+    IOFF, ION and VTH are effectively unchanged. Physically, heavier source/drain doping should lower the series resistance
+    and raise ION, but this is not seen because BSIM4 treats NSD separately from RDSW: NSD only enters junction built-in potential 
+    used in the S/D diode and short-channel terms
+
+Exp 10:
+    Increasing XJ from 10 nm to 30 nm has very little effect, with the transfer curves overlapping and IOFF unchanged 
+    and ION rising only slightly. Physically a deeper junction should worsen short-channel effects such as DIBL and raise IOFF,
+    but in BSIM4 XJ enters only through the short-channel correction terms, and the DIBL strength is set mainly by ETA0 and DSUB, 
+    so the compact model shows a much weaker dependence than a TCAD device would.
+
+Exp 11:
+    Lowering NGATE from 10²¹ to 10¹⁹ cm⁻³ makes poly-gate depletion significant at high gate bias, which adds a series 
+    depletion capacitance and reduces the inversion charge, so the transfer curve bends over at high VG and ION falls
+    The subthreshold region and IOFF are unchanged because poly depletion only matters at high gate voltage. 
+    On the ID–VD plot at VGS = 1.1 V, the low-NGATE curve lies well below the others over the whole sweep, with a smaller current
+    in the linear region and a lower saturation level, because the effective gate overdrive is reduced
+
+Exp 12:
+    Increasing U0 from 300 to 700 cm²/V·s raises the current at all gate voltages, with IOFF rising from about 5×10⁻⁹ A/µm to
+    about 9×10⁻⁹ A/µm because drift current scales with mobility, and the curves keep the same slope and position on the gate-voltage
+    axis, so VTH is unchanged. ION at VGS = VDS = 1.1 V rises much less than the 3 times increase in U0, because the short 65 nm ch
+    is limited by velocity saturation. On the ID–VD plot the low-U0 curve is lower in the linear region where as the three curves
+    move closer together in saturation, where the current is set by VSAT.
+
+Exp 13:
+    Increasing VSAT from 0.8×10⁷ to 2×10⁷ cm/s raises the on-state current strongly, with ION at VGS = VDS = 1.1 V going from about
+    890 µA/µm to about 1460 µA/µm, since the 65 nm channel is velocity-saturated and the saturation current scales with VSAT.
+    The subthreshold region and IOFF (about 7×10⁻⁹ A/µm) are unchanged because the current there is diffusion-limited,
+    so VTH does not move. On the ID–VD plot the curves with the high-VSAT device saturating at a higher voltage and a higher 
+    current level, and the low-VSAT device saturating early and flattening. This is the same behaviour seen in S4, where 
+    removing velocity saturation gave the largest increase in ION.
+
+Exp 14:
+    Increasing RDSW from 50 to 400 Ω·µm adds series resistance at the source and drain, so the effective gate and drain voltages
+    across the intrinsic channel are reduced and ION at VGS = VDS = 1.1 V falls strongly, from about 1560 µA/µm to about 800 µA/µm.
+    The subthreshold curves and IOFF overlap completely because the current there is too small to drop any voltage across resistance,
+    and VTH is therefore unchanged. On the ID–VD plot the slope in the linear region is much lower for large RDSW, since the series
+    resistance dominates the total on-resistance, and the saturation level is also reduced.
+
+    

@@ -1,0 +1,4 @@
+from Id vs Vd (Vg = 1.5V)
+
+gds = 2.7770e-04 S/µm
+ro  = 3.601 kΩ·µm

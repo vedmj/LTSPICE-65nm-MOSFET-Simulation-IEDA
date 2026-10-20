@@ -1,0 +1,19 @@
+     Vds = 50mV
+
+ID,on     = 1.939050e-04 A
+ID,off    = 2.071622e-09 A
+VTH = 0.375 V
+
+     Vds = 1.1V
+
+ID,on     = 1.152292e-03 A
+ID,off    = 6.692911e-08 A
+VTH = 0.324 V
+
+The extracted values of VTH, ION and IOFF are consistent with the reference values given in Section 5.1,
+confirming that the simulation setup is correct.
+The curves show the expected short-channel behaviour. On the linear axis, the drain current rises with gate voltage 
+once the device crosses threshold. On the logarithmic axis, the subthreshold region appears as a straight line, 
+and the VDS = 1.1 V curve lies above the VDS = 50 mV curve. This shift is caused by drain-induced barrier lowering (DIBL), 
+which lowers the effective threshold voltage at high drain bias, and it is also reflected in the lower VTH extracted 
+at VDS = 1.1 V. The device shows a high on/off current ratio suitable for digital switching,

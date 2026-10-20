@@ -1,0 +1,9 @@
+        Id vd Vg (Vd = 0.4) fit table
+
+Parameter Changed  Default Value  New value
+ XL                     -30nm       -25nm
+ LINT                    5.25nm      5.25nm
+ U0                      0.0491      0.0089
+ NGATE                   2e20        3.9e18
+
+
