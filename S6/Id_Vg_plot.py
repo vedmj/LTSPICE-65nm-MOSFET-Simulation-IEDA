@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-sp = pd.read_csv(r"S6/S6.txt", sep="\t")
+sp = pd.read_csv(r"S6/Id_vs_Vd_spice.txt", sep="\t")
 tc = pd.read_csv(r"S6/Id_vs_Vd(Vg_0.9).csv").iloc[:, :2]
 tc.columns = ["Vd", "Id"]
 
