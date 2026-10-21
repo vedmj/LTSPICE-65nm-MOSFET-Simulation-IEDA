@@ -1,9 +1,11 @@
-        Id vd Vg (Vd = 0.4) fit table
+        fit table
 
 Parameter Changed  Default Value  New value
  XL                     -30nm       -25nm
  LINT                    5.25nm      5.25nm
- U0                      0.0491      0.0089
- NGATE                   2e20        3.9e18
-
-
+ U0                      0.0491      0.0023
+ NGATE                   2e20        7e18
+ DSUB                    0.1         0.052
+ UA                      6e-10       0
+ UB                      1.2e-18     0
+ VSAT                    124340      300000

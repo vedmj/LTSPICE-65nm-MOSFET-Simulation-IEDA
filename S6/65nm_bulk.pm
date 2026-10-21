@@ -18,13 +18,13 @@
 +vth0    = 0.423        k1      = 0.4          k2      = 0.01         k3      = 0          
 +k3b     = 0            w0      = 2.5e-006     dvt0    = 1            dvt1    = 2       
 +dvt2    = -0.032       dvt0w   = 0            dvt1w   = 0            dvt2w   = 0          
-+dsub    = 0.1          minv    = 0.05         voffl   = 0            dvtp0   = 1.0e-009     
++dsub    = 0.052        minv    = 0.05         voffl   = 0            dvtp0   = 1.0e-009     
 +dvtp1   = 0.1          lpe0    = 0            lpeb    = 0            xj      = 1.96e-008   
-+ngate   = 3.9e+018       ndep    = 2.54e+018    nsd     = 2e+020       phin    = 0          
++ngate   = 7e+018       ndep    = 2.54e+018    nsd     = 2e+020       phin    = 0          
 +cdsc    = 0.000        cdscb   = 0            cdscd   = 0            cit     = 0          
 +voff    = -0.13        nfactor = 1.9          eta0    = 0.0058       etab    = 0          
-+vfb     = -0.55        u0      = 0.0089       ua      = 6e-010       ub      = 1.2e-018     
-+uc      = 0            vsat    = 124340       a0      = 1.0          ags     = 1e-020     
++vfb     = -0.55        u0      = 0.0023       ua      = 0            ub      = 0    
++uc      = 0            vsat    = 300000       a0      = 1.0          ags     = 1e-020     
 +a1      = 0            a2      = 1.0          b0      = 0            b1      = 0          
 +keta    = 0.04         dwg     = 0            dwb     = 0            pclm    = 0.04       
 +pdiblc1 = 0.001        pdiblc2 = 0.001        pdiblcb = -0.005       drout   = 0.5        
@@ -73,7 +73,7 @@
 
 * PTM 65nm PMOS
  
-.model  pmos  pmos  level = 54
+.model  pmos1  pmos  level = 54
 
 +version = 4.0          binunit = 1            paramchk= 1            mobmod  = 0          
 +capmod  = 2            igcmod  = 1            igbmod  = 1            geomod  = 1          
